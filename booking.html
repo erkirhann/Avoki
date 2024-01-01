@@ -7,23 +7,58 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
     <!-- Include the datepicker CSS and JS files -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- Include other stylesheets first -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- ... Other stylesheets ... -->
+
+    <!-- Then include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 
-<body class="flex items-center justify-center h-screen">
-    <div class=" p-2">
-        <div class="bg-green-200 p-4">
-            <div class="flex justify-between mb-4">
-                <h2 class="mr-2">Select a date:</h2>
-                <h6>IST</h6>
+<body>
+   
+        <header class="bg-black">
+            <ul class="flex justify-center p-3">
+                <li class="text-white">
+                    <a class="text-white" href="./index.html">
+                        Home
+                    </a></li>
+            </ul>
+        </header>
+    <div class="flex items-center justify-center h-screen">
+
+        <div class=" p-2">
+            <div class="bg-green-200 p-4 rounded">
+                <div class="flex justify-between mb-4">
+                    <h2 class="mr-2">Select a date:</h2>
+                    <h6>IST</h6>
+                </div>
+                <!-- Calendar input and time slot -->
+                <div class="flex ">
+                    <div id="datepicker" class="rounded w-1/2"></div>
+                </div>
+                <div class="flex justify-center bg-blue-400 mt-3  rounded text-white">
+                    <button id="enquireBtn" class=" w-full">Enquire</button>
+                </div>
             </div>
-            <!-- Calendar input and time slot -->
-            <div class="flex ">
-                <div id="datepicker" class="rounded w-1/2"></div>
-            </div>
-            <div class="flex justify-center bg-blue-400 mt-3  rounded text-white">
-                <button id="enquireBtn" class=" w-full">Enquire</button>
-            </div>
+        </div>
+        <div class=" p-2">
+
         </div>
     </div>
 
