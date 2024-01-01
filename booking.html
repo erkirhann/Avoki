@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Include the datepicker CSS and JS files -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+
+<body class="flex items-center justify-center h-screen">
+    <div class=" p-2">
+        <div class="bg-green-200 p-4">
+            <div class="flex justify-between mb-4">
+                <h2 class="mr-2">Select a date:</h2>
+                <h6>IST</h6>
+            </div>
+            <!-- Calendar input and time slot -->
+            <div class="flex space-x-3">
+                <div id="datepicker" class="rounded w-1/2"></div>
+                <div class="items-stretch  w-1/2 p-10">
+                    <div class="flex space-x-2">
+                        <div class="border">10:00</div>
+                        <div class="border">11:00</div>
+                    </div>
+                    <div class="flex space-x-2 ">
+                        <div class="border">10:00</div>
+                        <div class="border">11:00</div>
+                    </div>
+                    <div class="flex space-x-2">
+                        <div class="border">10:00</div>
+                        <div class="border">11:00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Initialize the datepicker and generate time slots -->
+    <script>
+        flatpickr("#datepicker", {
+            enableTime: false,
+            dateFormat: "Y-m-d",
+            inline: true, // Display the calendar without clicking the input
+        });
+
+        // Function to generate time slots with 1-hour gaps
+        function generateTimeSlots() {
+            var hoursSelect = document.getElementById("hours");
+            var minutesSelect = document.getElementById("minutes");
+
+            for (var i = 0; i < 10; i++) {
+                var hour = i + 9; // Starting from 9 AM
+                var formattedHour = hour < 10 ? "0" + hour : hour;
+                var option = new Option(formattedHour, formattedHour);
+                hoursSelect.add(option);
+            }
+
+            for (var j = 0; j < 60; j += 15) {
+                var formattedMinute = j === 0 ? "00" : j;
+                var minuteOption = new Option(formattedMinute, formattedMinute);
+                minutesSelect.add(minuteOption);
+            }
+        }
+
+        // Call the function to generate time slots
+        generateTimeSlots();
+    </script>
+</body>
+
+</html>
