@@ -20,25 +20,14 @@
             <!-- Calendar input and time slot -->
             <div class="flex space-x-3">
                 <div id="datepicker" class="rounded w-1/2"></div>
-                <div class="items-stretch  w-1/2 p-10">
-                    <div class="flex space-x-2">
-                        <div class="border">10:00</div>
-                        <div class="border">11:00</div>
-                    </div>
-                    <div class="flex space-x-2 ">
-                        <div class="border">10:00</div>
-                        <div class="border">11:00</div>
-                    </div>
-                    <div class="flex space-x-2">
-                        <div class="border">10:00</div>
-                        <div class="border">11:00</div>
-                    </div>
-                </div>
+            </div>
+            <div class="flex justify-center bg-blue-400 mt-3 mx-2 rounded text-white">
+                <button id="enquireBtn" class="300">Enquire</button>
             </div>
         </div>
     </div>
 
-    <!-- Initialize the datepicker and generate time slots -->
+    <!-- Initialize the datepicker -->
     <script>
         flatpickr("#datepicker", {
             enableTime: false,
@@ -46,27 +35,17 @@
             inline: true, // Display the calendar without clicking the input
         });
 
-        // Function to generate time slots with 1-hour gaps
-        function generateTimeSlots() {
-            var hoursSelect = document.getElementById("hours");
-            var minutesSelect = document.getElementById("minutes");
+        // Get the selected date and initiate WhatsApp message
+        document.getElementById("enquireBtn").addEventListener("click", function () {
+            var selectedDate = document.getElementById("datepicker").value;
+            var message = "Hello, I would like to enquire about the availability on " + selectedDate;
 
-            for (var i = 0; i < 10; i++) {
-                var hour = i + 9; // Starting from 9 AM
-                var formattedHour = hour < 10 ? "0" + hour : hour;
-                var option = new Option(formattedHour, formattedHour);
-                hoursSelect.add(option);
-            }
+            // Replace with your WhatsApp number and message
+            var whatsappLink = "https://wa.me/8129957753?text=" + encodeURIComponent(message);
 
-            for (var j = 0; j < 60; j += 15) {
-                var formattedMinute = j === 0 ? "00" : j;
-                var minuteOption = new Option(formattedMinute, formattedMinute);
-                minutesSelect.add(minuteOption);
-            }
-        }
-
-        // Call the function to generate time slots
-        generateTimeSlots();
+            // Open WhatsApp in a new tab
+            window.open(whatsappLink, "_blank");
+        });
     </script>
 </body>
 
