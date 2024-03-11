@@ -751,6 +751,13 @@ h3{
 .slider_bg_2{
     background-image:url(../img/banner/b2.jpg)
 }
+.slider_bg_1{
+    background-image:url(../img/banner/b1.jpg)
+}
+.slider_bg_2{
+    background-image:url(../img/banner/b2.jpg)
+}
+
 .slider_area .single_slider{
     height:100vh;
     background-size:cover;
@@ -871,7 +878,9 @@ h3{
     margin-left:10px
 }
 .about_bg_1{
-    background-image:url(../img/banner/about_banner.png)
+
+    background-image:url(../img/about/p\ ex\ 1.jpg)
+    
 }
 .about_info_area{
     padding-left:387px;
@@ -1554,7 +1563,7 @@ h3{
     color:#fff
 }
 .breadcam_bg{
-    background-image:url(../img/banner/bradcam.png)
+    background-image:url(../img/about/jj1.jpg)
 }
 .breadcam_bg_1{
     background-image:url(../img/banner/bradcam2.png)
