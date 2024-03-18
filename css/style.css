@@ -1566,10 +1566,13 @@ h3{
     background-image:url(../img/about/jj1.jpg)
 }
 .breadcam_bg_1{
-    background-image:url(../img/banner/bradcam2.png)
+    /* background-image:url(../img/banner/bradcam2.png) */
+    /* background-color: black; */
 }
 .breadcam_bg_2{
-    background-image:url(../img/banner/bradcam3.png)
+    /* background-image:url(../img/banner/bradcam3.png) */
+    background-color: black;
+
 }
 .bradcam_area{
     padding:170px;
@@ -1588,7 +1591,8 @@ h3{
     color:#fff;
     font-weight:400;
     margin-bottom:0;
-    text-transform:capitalize
+    text-transform:capitalize;
+    font-family: cursive;
 }
 @media (max-width: 767px){
     .bradcam_area h3{
